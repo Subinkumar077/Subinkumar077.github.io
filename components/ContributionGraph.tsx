@@ -40,10 +40,10 @@ export default function ContributionGraph() {
 
   const getColorClass = (count: number) => {
     if (count === 0) return "bg-[#161616]";
-    if (count <= 2) return "bg-neutral-800";
-    if (count <= 5) return "bg-neutral-600";
-    if (count <= 10) return "bg-neutral-400";
-    return "bg-white";
+    if (count <= 2) return "bg-green-300"; // Light (Low contributions)
+    if (count <= 5) return "bg-green-400";
+    if (count <= 10) return "bg-green-600";
+    return "bg-green-800"; // Dark (High contributions)
   };
 
   const months = [
@@ -105,10 +105,10 @@ export default function ContributionGraph() {
             <span>Less</span>
             <div className="flex gap-1">
               <div className="w-3 h-3 rounded-[1px] bg-[#161616]"></div>
-              <div className="w-3 h-3 rounded-[1px] bg-neutral-800"></div>
-              <div className="w-3 h-3 rounded-[1px] bg-neutral-600"></div>
-              <div className="w-3 h-3 rounded-[1px] bg-neutral-400"></div>
-              <div className="w-3 h-3 rounded-[1px] bg-white"></div>
+              <div className="w-3 h-3 rounded-[1px] bg-green-300"></div>
+              <div className="w-3 h-3 rounded-[1px] bg-green-400"></div>
+              <div className="w-3 h-3 rounded-[1px] bg-green-600"></div>
+              <div className="w-3 h-3 rounded-[1px] bg-green-800"></div>
             </div>
             <span>More</span>
           </div>
@@ -149,10 +149,10 @@ export default function ContributionGraph() {
           <span>Less</span>
           <div className="flex gap-1">
             <div className="w-3 h-3 rounded-[1px] bg-[#161616]"></div>
-            <div className="w-3 h-3 rounded-[1px] bg-neutral-800"></div>
-            <div className="w-3 h-3 rounded-[1px] bg-neutral-600"></div>
-            <div className="w-3 h-3 rounded-[1px] bg-neutral-400"></div>
-            <div className="w-3 h-3 rounded-[1px] bg-white"></div>
+            <div className="w-3 h-3 rounded-[1px] bg-green-300"></div>
+            <div className="w-3 h-3 rounded-[1px] bg-green-400"></div>
+            <div className="w-3 h-3 rounded-[1px] bg-green-600"></div>
+            <div className="w-3 h-3 rounded-[1px] bg-green-800"></div>
           </div>
           <span>More</span>
         </div>

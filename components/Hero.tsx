@@ -16,38 +16,37 @@ export default function Hero() {
 
         <div className="flex flex-col gap-6 text-lg font-light text-neutral-300 leading-relaxed">
           <p>
-            I&apos;m a self-driven builder from India focused on shipping real
-            products and owning my work end to end. I started with frontend and
-            full stack development, faced early failures, got fired, and used
-            that phase to build resilience instead of quitting.
+            I build <span className="text-pink-400">innovative digital solutions</span> and teach others to amplify their{" "}
+            <span className="text-pink-400">digital presence</span> through{" "}
+            <span className="text-pink-400">code, design, and content</span>.
           </p>
-          <p>
-            Since then, I&apos;ve moved from small freelance gigs to{" "}
-            <span className="text-white font-medium">
-              running my own agency
-            </span>
-            , delivering products for clients and building tools and design
-            assets of my own.
-          </p>
-          <p>
-            I build in public, sharing honest lessons from wins, mistakes, and
-            pivots while growing an audience along the way. I value{" "}
-            <span className="text-pink-400">
-              freedom, ownership, and long-term leverage
-            </span>
-            .
-          </p>
-          <p>
-            Always building, always learning,{" "}
-            <span className="text-white border-b border-white/20 pb-0.5">
-              open to the right conversations
-            </span>
-            .{" "}
-            <Link
-              href="#contact"
-              className="text-white hover:text-pink-400 transition-colors underline decoration-neutral-700 underline-offset-4"
+          
+          <div className="flex flex-col gap-1 text-base">
+            <p>
+              <span className="text-pink-400 font-medium">Founder</span> @{" "}
+              <Link
+                href="https://www.infinitestudiox.art/"
+                target="_blank"
+                className="hover:text-pink-400 transition-colors"
+              >
+                InfiniteStudioX
+              </Link>
+            </p>
+            <a
+              href="mailto:xharish52@gmail.com"
+              className="text-neutral-400 hover:text-pink-400 transition-colors w-fit"
             >
-              Let&apos;s talk.
+              xharish52@gmail.com
+            </a>
+          </div>
+
+          <p>
+            <Link
+              href="https://calendly.com/xharish52/30min"
+              target="_blank"
+              className="text-pink-400 hover:text-white transition-colors underline decoration-neutral-700 underline-offset-4"
+            >
+              Book a Call
             </Link>
           </p>
         </div>

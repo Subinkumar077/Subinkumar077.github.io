@@ -10,9 +10,20 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
-  // UI/UX Projects
   {
     id: 1,
+    Name: "Sparky",
+    Description: "Gamefied Edtech platform Design",
+    bgimage: "/assets/sparky.png",
+    bgDarkImage: "/assets/sparky.png",
+    LinkGit: "https://saprky-1v.vercel.app/",
+    category: "uiux",
+    Technologies: ["Nextjs", "Tailwind",],
+
+  },
+  // UI/UX Projects
+  {
+    id: 2,
     Name: "UI Hackathon",
     Description: "Selected UI screens and interactions",
     bgimage: "/assets/uihack.png",
@@ -21,7 +32,7 @@ export const projectsData: Project[] = [
     category: "uiux",
   },
   {
-    id: 2,
+    id: 3,
     Name: "Salfiya",
     Description: "Portfolio website for a friend",
     bgimage: "/assets/salfiya.png",
@@ -29,15 +40,7 @@ export const projectsData: Project[] = [
     LinkGit: "https://salfiya.sh/",
     category: "uiux",
   },
-  {
-    id: 3,
-    Name: "Elegance",
-    Description: "Cosmetic showcase UI website",
-    bgimage: "/assets/Alan.png",
-    bgDarkImage: "/assets/Alan.png",
-    LinkGit: "https://elegance-orpin.vercel.app/",
-    category: "uiux",
-  },
+
   {
     id: 4,
     Name: "Panekka",
@@ -97,7 +100,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/raostume.png",
     LinkGit: "https://roastume.fun",
     category: "fullstack",
-    Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
+    Technologies: ["Nextjs", "Tailwind"],
   },
   {
     id: 10,
@@ -107,6 +110,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/pixelbrain.png",
     LinkGit: "https://iq-quiz-kappa.vercel.app/",
     category: "fullstack",
+    Technologies: ["Nextjs", "Tailwind"],
   },
   // Freelance Projects
   {

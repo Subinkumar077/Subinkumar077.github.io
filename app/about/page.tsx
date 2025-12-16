@@ -66,17 +66,19 @@ export default function AboutPage() {
 
           <div className="bg-neutral-900/30 border border-white/5 rounded-2xl p-8">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-500 font-bold text-2xl">
+              <div className="w-16 h-16 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-500 font-geist font-medium text-2xl">
                 H
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-xl font-bold text-white">Harish_521</h3>
-                  <span className="bg-blue-500/10 text-blue-500 text-[10px] px-1.5 py-0.5 rounded uppercase font-bold tracking-wider">
+                  <h3 className="text-xl font-geist font-medium tracking-tight text-white">
+                    Harish_521
+                  </h3>
+                  <span className="bg-blue-500/10 text-blue-400 text-[10px] px-1.5 py-0.5 rounded uppercase font-bold tracking-wider border border-blue-500/20">
                     Verified
                   </span>
                 </div>
-                <p className="text-neutral-400 text-sm">
+                <p className="text-neutral-400 text-sm font-geist">
                   Content Creator & Teacher
                 </p>
               </div>
