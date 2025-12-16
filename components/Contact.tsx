@@ -1,11 +1,8 @@
 import {
-    Coffee,
-    Gamepad2,
-    Github,
-    Instagram,
-    Linkedin,
-    Twitter,
-    Youtube,
+  Coffee,
+  Github,
+  Linkedin,
+  Twitter
 } from "lucide-react";
 import Link from "next/link";
 
@@ -24,57 +21,50 @@ export default function Contact() {
               If you have any inquiries, please feel free to reach out. You can
               contact me via email at <br />
               <a
-                href="mailto:hi@ayushworks.com"
+                href="mailto:xharish52@gmail.com"
                 className="text-pink-400 hover:text-white transition-colors"
               >
-                hi@ayushworks.com
+                xharish52@gmail.com
               </a>
             </p>
 
             <div className="pt-4">
               <p className="text-sm text-white mb-4">Follow me</p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 flex-wrap">
                 <Link
-                  href="#"
+                  href="https://github.com/MohammadHarish521"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-white hover:text-black hover:border-white transition-all duration-300"
                 >
                   <Github className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/in/mdharish84/"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] transition-all duration-300"
                 >
                   <Linkedin className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="#"
-                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-gradient-to-tr hover:from-orange-500 hover:to-purple-600 hover:text-white hover:border-transparent transition-all duration-300"
-                >
-                  <Instagram className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="#"
-                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-[#5865F2] hover:text-white hover:border-[#5865F2] transition-all duration-300"
-                >
-                  <Gamepad2 className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="#"
-                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
-                >
-                  <Youtube className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="#"
+                  href="https://x.com/Harish_521"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-black hover:text-white hover:border-white transition-all duration-300"
                 >
                   <Twitter className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="#"
-                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-all duration-300"
+                  href="https://topmate.io/mohd_harish10"
+                  title="Topmate"
+                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-teal-500 hover:text-white hover:border-teal-500 transition-all duration-300"
                 >
                   <Coffee className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="mt-8">
+                <p className="text-sm text-white mb-4">Let's Connect</p>
+                 <Link
+                  href="https://calendly.com/xharish52/30min"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-neutral-200 transition-colors w-full md:w-auto"
+                >
+                  <Coffee className="w-4 h-4 mr-2" /> Book a call
                 </Link>
               </div>
             </div>

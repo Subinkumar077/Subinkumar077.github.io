@@ -65,15 +65,9 @@ export default function ContributionGraph() {
   if (loading || error || !data) {
     const weeks = 53;
     const days = 7;
+    // Use a static grid for loading state to avoid hydration mismatch
     const grid = Array.from({ length: weeks }, () =>
-      Array.from({ length: days }, () => {
-        const intensity = Math.random();
-        if (intensity > 0.9) return "bg-white";
-        if (intensity > 0.7) return "bg-neutral-400";
-        if (intensity > 0.5) return "bg-neutral-700";
-        if (intensity > 0.3) return "bg-neutral-800";
-        return "bg-[#161616]";
-      })
+      Array.from({ length: days }, () => "bg-[#161616]")
     );
 
     return (
