@@ -7,6 +7,11 @@ export default function FeaturedProjects() {
   const fullStackProjects = projectsData.filter(
     (project) => project.category === "fullstack"
   );
+  const uiUxProjects = projectsData
+    .filter((project) => project.category === "uiux")
+    .slice(0, 2);
+
+  const featuredProjects = [...fullStackProjects, ...uiUxProjects];
 
   return (
     <section id="projects" className="mt-32 lg:pl-12 relative">
@@ -15,7 +20,7 @@ export default function FeaturedProjects() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
-        {fullStackProjects.map((project) => (
+        {featuredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>

@@ -10,6 +10,7 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
+   // UI/UX Projects
   {
     id: 1,
     Name: "Sparky",
@@ -20,19 +21,29 @@ export const projectsData: Project[] = [
     category: "uiux",
     Technologies: ["Nextjs", "Tailwind",],
 
-  },
-  // UI/UX Projects
-  {
+  },{
     id: 2,
+    Name: "Digilab",
+    Description: "The operating system for planetary preservation.",
+    bgimage: "/assets/digilab.png",
+    bgDarkImage: "/assets/digilab.png",
+    LinkGit: "https://designs-xd7x.vercel.app/",
+    category: "uiux",
+    Technologies: ["Nextjs", "Tailwind",],
+  },
+ 
+  {
+    id: 3,
     Name: "UI Hackathon",
     Description: "Selected UI screens and interactions",
     bgimage: "/assets/uihack.png",
     bgDarkImage: "/assets/uihack.png",
     LinkGit: "https://ui-hackathon-jam.vercel.app/",
     category: "uiux",
+    Technologies: ["Nextjs", "Tailwind",],
   },
   {
-    id: 3,
+    id: 4 ,
     Name: "Salfiya",
     Description: "Portfolio website for a friend",
     bgimage: "/assets/salfiya.png",
@@ -42,7 +53,7 @@ export const projectsData: Project[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     Name: "Panekka",
     Description: "Recipe UI",
     bgimage: "/assets/panekka.png",
@@ -52,7 +63,7 @@ export const projectsData: Project[] = [
     Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
   },
   {
-    id: 5,
+    id:   6,
     Name: "Perfectly Scaled",
     Description: "Product visualization UI",
     bgimage: "/assets/perfectscaled.png",
@@ -62,7 +73,7 @@ export const projectsData: Project[] = [
     Technologies: ["API"],
   },
   {
-    id: 6,
+    id: 7,
     Name: "Funky Tweets",
     Description: "Twitter-inspired UI",
     bgimage: "/assets/funkytweets.png",
@@ -72,7 +83,7 @@ export const projectsData: Project[] = [
     Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
   },
   {
-    id: 7,
+    id:   8,
     Name: "Aesop UI",
     Description: "Aesop homepage clone",
     bgimage: "/assets/aesop.png",
@@ -82,7 +93,7 @@ export const projectsData: Project[] = [
     Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
   },
   {
-    id: 8,
+    id: 9,
     Name: "FocusFeed",
     Description: "News media UI",
     bgimage: "/assets/focusfeed.png",
@@ -93,7 +104,7 @@ export const projectsData: Project[] = [
   },
   // Full-Stack Projects
   {
-    id: 9,
+    id: 10,
     Name: "Roastume",
     Description: "Resume roaster and feedback tool",
     bgimage: "/assets/raostume.png",
@@ -103,7 +114,7 @@ export const projectsData: Project[] = [
     Technologies: ["Nextjs", "Tailwind"],
   },
   {
-    id: 10,
+    id: 11,
     Name: "Pixel Brain IQ",
     Description: "AI quiz and brain-training app",
     bgimage: "/assets/pixelbrain.png",
@@ -114,7 +125,7 @@ export const projectsData: Project[] = [
   },
   // Freelance Projects
   {
-    id: 11,
+    id: 12,
     Name: "Fast & Fab",
     bgimage: "/assets/fastfab.png",
     bgDarkImage: "/assets/fastfab.png",
@@ -123,7 +134,7 @@ export const projectsData: Project[] = [
     category: "freelance",
   },
   {
-    id: 12,
+    id: 13,
     Name: "Beyond Dreams",
     bgimage: "/assets/beyonddream.png",
     bgDarkImage: "/assets/beyonddream.png",
@@ -132,7 +143,7 @@ export const projectsData: Project[] = [
     category: "freelance",
   },
   {
-    id: 13,
+    id: 14,
     Name: "E-Legalify",
     bgimage: "/assets/elegalify.png",
     bgDarkImage: "/assets/elegalify.png",
@@ -141,7 +152,7 @@ export const projectsData: Project[] = [
     category: "freelance",
   },
   {
-    id: 14,
+    id: 15,
     Name: "Memansa",
     bgimage: "/assets/memansa.png",
     bgDarkImage: "/assets/memansa.png",
@@ -149,15 +160,7 @@ export const projectsData: Project[] = [
     Description: "Accessories design website",
     category: "freelance",
   },
-  {
-    id: 15,
-    Name: "instaChip",
-    bgimage: "/assets/instachip.png",
-    bgDarkImage: "/assets/instachip.png",
-    LinkGit: "https://residency-client.vercel.app/",
-    Description: "Restaurant management system",
-    category: "freelance",
-  },
+
   {
     id: 16,
     Name: "LetsGrowEsports",
