@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SocialStats from "@/components/SocialStats";
 import { educationData, experienceData } from "@/data/experience";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -66,8 +67,14 @@ export default function AboutPage() {
 
           <div className="bg-neutral-900/30 border border-white/5 rounded-2xl p-8">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-500 font-geist font-medium text-2xl">
-                H
+              <div className="w-16 h-16 rounded-full flex items-center justify-center text-pink-500 font-geist font-medium text-2xl">
+                <Image
+                src="/assets/face.jpg"
+                alt="Panekka"
+                width={50}
+                height={50}
+                className="rounded-full "
+              />
               </div>
               <div>
                 <div className="flex items-center gap-2">
