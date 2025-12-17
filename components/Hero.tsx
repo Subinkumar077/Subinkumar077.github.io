@@ -1,17 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import CodingStatusDot from "./CodingStatus";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col gap-8 mt-10 lg:pl-12">
-      {/* Image */}
-      <div className="relative w-20 h-20 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 border-neutral-800">
-        <Image
-          src="/assets/face.jpg"
-          alt="Mohammad Harish"
-          fill
-          className="object-cover"
-        />
+    <section className="flex flex-col gap-8 mt-10">
+      {/* Image with Status Dot */}
+      <div className="relative w-20 h-20 lg:w-28 lg:h-28 aspect-square rounded-full overflow-visible">
+        <div className="w-full h-full aspect-square rounded-full overflow-hidden border-2 border-neutral-800">
+          <Image
+            src="/assets/face.png"
+            alt="Mohammad Harish"
+            fill
+            className="object-cover rounded-full"
+          />
+        </div>
+        {/* Status Dot Overlay */}
+        <CodingStatusDot />
       </div>
 
       {/* Name and Title */}

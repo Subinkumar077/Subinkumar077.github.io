@@ -1,6 +1,17 @@
-import { Youtube } from "lucide-react";
+import { LucideIcon, Youtube } from "lucide-react";
 
-export const workshopVideos = [
+export interface WorkshopVideo {
+  title: string;
+  link: string;
+  description: string;
+  icon: LucideIcon;
+  tags: string[];
+  image: string;
+  duration?: string;
+  views?: string;
+}
+
+export const workshopVideos: WorkshopVideo[] = [
   {
     title: "GitBash End to End Workshop",
     link: "https://youtu.be/LAgteV10_38?si=UmKVHwW_Fd5McVPR",
@@ -8,6 +19,8 @@ export const workshopVideos = [
     icon: Youtube,
     tags: ["#git", "#workflow", "#terminal"],
     image: "/assets/gitbash.png",
+    duration: "45 min",
+    views: "1.2K",
   },
   {
     title: "HTML Workshop | Part 1",
@@ -16,6 +29,8 @@ export const workshopVideos = [
     icon: Youtube,
     tags: ["#html", "#web-dev", "#basics"],
     image: "/assets/html.png",
+    duration: "32 min",
+    views: "850",
   },
   {
     title: "HTML Workshop | Part 2",
@@ -24,5 +39,7 @@ export const workshopVideos = [
     icon: Youtube,
     tags: ["#html", "#frontend", "#tutorial"],
     image: "/assets/html2.png",
+    duration: "28 min",
+    views: "620",
   },
 ];
