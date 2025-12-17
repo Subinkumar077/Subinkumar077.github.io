@@ -1,5 +1,6 @@
 import { blogPosts } from "@/data/blog";
 import { Calendar, Clock } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function RecentPosts() {
@@ -12,6 +13,15 @@ export default function RecentPosts() {
       <div className="flex flex-col gap-10">
         {blogPosts.map((post, index) => {
           const Icon = post.icon;
+          const themes = [
+            { icon: "group-hover:text-cyan-400", title: "group-hover:text-cyan-300", tags: "text-cyan-400" },
+            { icon: "group-hover:text-violet-400", title: "group-hover:text-violet-300", tags: "text-violet-400" },
+            { icon: "group-hover:text-amber-400", title: "group-hover:text-amber-300", tags: "text-amber-400" },
+            { icon: "group-hover:text-emerald-400", title: "group-hover:text-emerald-300", tags: "text-emerald-400" },
+            { icon: "group-hover:text-pink-400", title: "group-hover:text-pink-300", tags: "text-pink-400" },
+          ];
+          const theme = themes[index % themes.length];
+
           return (
             <Link
               key={index}
@@ -21,12 +31,21 @@ export default function RecentPosts() {
               className="group flex flex-col md:flex-row gap-6 items-start hover:bg-white/5 p-4 -mx-4 rounded-xl transition-colors"
             >
               <div className="w-full md:w-48 aspect-video bg-neutral-900 border border-white/10 rounded-lg overflow-hidden shrink-0 relative">
-                <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center">
-                  <Icon className="text-neutral-700 w-8 h-8 group-hover:text-pink-500 transition-colors" />
-                </div>
+                {post.image ? (
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center">
+                    <Icon className={`text-neutral-700 w-8 h-8 ${theme.icon} transition-colors`} />
+                  </div>
+                )}
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-medium text-white group-hover:text-pink-400 transition-colors">
+                <h3 className={`text-lg font-medium text-white ${theme.title} transition-colors`}>
                   {post.title}
                 </h3>
                 <div className="flex items-center gap-3 text-xs text-neutral-500 font-geist">
@@ -40,7 +59,7 @@ export default function RecentPosts() {
                 <p className="text-sm text-neutral-400 font-light line-clamp-2 mt-1">
                   {post.description}
                 </p>
-                <div className="flex gap-2 text-xs text-pink-600 mt-1 flex-wrap">
+                <div className={`flex gap-2 text-xs ${theme.tags} mt-1 flex-wrap`}>
                   {post.tags.map((tag, tagIndex) => (
                     <span key={tagIndex}>{tag}</span>
                   ))}

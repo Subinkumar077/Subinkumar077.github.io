@@ -1,10 +1,11 @@
-import {
-  Coffee,
-  Github,
-  Linkedin,
-  Twitter
-} from "lucide-react";
 import Link from "next/link";
+import {
+  FaCoffee,
+  FaGithub,
+  FaLinkedin,
+  FaYoutube
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
   return (
@@ -35,26 +36,32 @@ export default function Contact() {
                   href="https://github.com/MohammadHarish521"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-white hover:text-black hover:border-white transition-all duration-300"
                 >
-                  <Github className="w-4 h-4" />
+                  <FaGithub className="w-4 h-4" />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/mdharish84/"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] transition-all duration-300"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <FaLinkedin className="w-4 h-4" />
                 </Link>
                 <Link
                   href="https://x.com/Harish_521"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-black hover:text-white hover:border-white transition-all duration-300"
                 >
-                  <Twitter className="w-4 h-4" />
+                  <FaXTwitter  className="w-4 h-4" />
                 </Link>
                 <Link
                   href="https://topmate.io/mohd_harish10"
                   title="Topmate"
                   className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-teal-500 hover:text-white hover:border-teal-500 transition-all duration-300"
                 >
-                  <Coffee className="w-4 h-4" />
+                  <FaCoffee className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="https://www.youtube.com/@mohammadharish8740"
+                  className="w-10 h-10 rounded border border-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300"
+                >
+                  <FaYoutube className="w-4 h-4" />
                 </Link>
               </div>
               
@@ -64,7 +71,7 @@ export default function Contact() {
                   href="https://calendly.com/xharish52/30min"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-neutral-200 transition-colors w-full md:w-auto"
                 >
-                  <Coffee className="w-4 h-4 mr-2" /> Book a call
+                  <FaCoffee className="w-4 h-4 mr-2" /> Book a call
                 </Link>
               </div>
             </div>

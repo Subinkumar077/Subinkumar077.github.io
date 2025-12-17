@@ -1,0 +1,75 @@
+import { workshopVideos } from "@/data/videos";
+import { Play } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function WorkshopVideos() {
+  return (
+    <section id="workshops" className="mt-32 lg:pl-12 relative">
+      <h2 className="text-3xl font-geist font-light tracking-tight text-white mb-12">
+        Workshops & Tutorials
+      </h2>
+
+      <div className="flex flex-col gap-10">
+        {workshopVideos.map((video, index) => {
+          const themes = [
+            { icon: "group-hover:text-orange-500", title: "group-hover:text-orange-400", tags: "text-orange-500", border: "group-hover:border-orange-500/30" },
+            { icon: "group-hover:text-blue-500", title: "group-hover:text-blue-400", tags: "text-blue-500", border: "group-hover:border-blue-500/30" },
+            { icon: "group-hover:text-purple-500", title: "group-hover:text-purple-400", tags: "text-purple-500", border: "group-hover:border-purple-500/30" },
+            { icon: "group-hover:text-green-500", title: "group-hover:text-green-400", tags: "text-green-500", border: "group-hover:border-green-500/30" },
+            { icon: "group-hover:text-pink-500", title: "group-hover:text-pink-400", tags: "text-pink-500", border: "group-hover:border-pink-500/30" },
+          ];
+          const theme = themes[index % themes.length];
+
+          return (
+            <Link
+              key={index}
+              href={video.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col md:flex-row gap-6 items-start hover:bg-white/5 p-4 -mx-4 rounded-xl transition-colors"
+            >
+              <div className={`w-full md:w-48 aspect-video bg-neutral-900 border border-white/10 rounded-lg overflow-hidden shrink-0 relative ${theme.border} transition-colors`}>
+                {video.image ? (
+                  <>
+                    <Image
+                      src={video.image}
+                      alt={video.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                      <Play className={`text-white w-8 h-8 ${theme.icon} transition-colors fill-current drop-shadow-md`} />
+                    </div>
+                  </>
+                ) : (
+                  <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center">
+                    <Play className={`text-neutral-700 w-8 h-8 ${theme.icon} transition-colors fill-current`} />
+                  </div>
+                )}
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+              </div>
+              
+              <div className="flex flex-col gap-2">
+                <h3 className={`text-lg font-medium text-white ${theme.title} transition-colors`}>
+                  {video.title}
+                </h3>
+                
+                <p className="text-sm text-neutral-400 font-light line-clamp-2 mt-1">
+                  {video.description}
+                </p>
+                
+                <div className={`flex gap-2 text-xs ${theme.tags} mt-1 flex-wrap`}>
+                  {video.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
+}

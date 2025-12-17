@@ -9,6 +9,7 @@ export const blogPosts = [
     link: "https://x.com/Harish_521/status/1971230780463669723?s=20",
     tags: ["#freelancing", "#clients", "#cold-dm"],
     icon: Twitter,
+    image: "/assets/post1.png",
   },
   {
     title: "How I got 2 US remote internships and one full time offer",
@@ -18,5 +19,6 @@ export const blogPosts = [
     link: "https://x.com/Harish_521/status/1964730742858248574?s=20",
     tags: ["#career", "#internships", "#remote-work"],
     icon: Briefcase,
+    image: "/assets/post2.png",
   },
 ];

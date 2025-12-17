@@ -56,8 +56,8 @@ export default function ProjectsPage() {
               UI-UX Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
-              {uiuxProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+              {uiuxProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} />
               ))}
             </div>
           </section>
@@ -71,8 +71,8 @@ export default function ProjectsPage() {
               Full-Stack Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
-              {fullstackProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+              {fullstackProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index + uiuxProjects.length} />
               ))}
             </div>
           </section>
@@ -86,8 +86,8 @@ export default function ProjectsPage() {
               Freelance Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20">
-              {freelanceProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+              {freelanceProjects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index + uiuxProjects.length + fullstackProjects.length} />
               ))}
             </div>
           </section>

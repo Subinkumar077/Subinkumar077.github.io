@@ -4,9 +4,19 @@ import Link from "next/link";
 
 interface ProjectCardProps {
   project: Project;
+  index: number;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const themes = [
+    { text: "text-cyan-400", hover: "hover:text-cyan-300" },
+    { text: "text-violet-400", hover: "hover:text-violet-300" },
+    { text: "text-amber-400", hover: "hover:text-amber-300" },
+    { text: "text-emerald-400", hover: "hover:text-emerald-300" },
+    { text: "text-pink-500", hover: "hover:text-pink-400" }, // Keep pink as one option
+  ];
+  const theme = themes[index % themes.length] || themes[0];
+
   return (
     <div className="group flex flex-col gap-5">
       <div className="relative w-full aspect-video bg-neutral-900 border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all duration-300">
@@ -24,7 +34,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.Name}
         </h3>
         {project.Technologies && (
-          <p className="text-xs text-pink-500 font-geist mb-3">
+          <p className={`text-xs ${theme.text} font-geist mb-3`}>
             {project.Technologies.join(" / ")}
           </p>
         )}
@@ -34,7 +44,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex gap-4 text-xs font-medium">
           <Link
             href={project.LinkGit}
-            className="flex items-center gap-1.5 text-pink-400 hover:text-pink-300 transition-colors"
+            className={`flex items-center gap-1.5 opacity-90 ${theme.text} ${theme.hover} transition-colors`}
           >
             <ExternalLink className="w-3.5 h-3.5" /> Live Preview
           </Link>

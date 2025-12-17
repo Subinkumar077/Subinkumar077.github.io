@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import RecentPosts from "@/components/RecentPosts";
 import ToolsMarquee from "@/components/ToolsMarquee";
+import WorkshopVideos from "@/components/WorkshopVideos";
 
 export default function Home() {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
         <ContributionGraph />
         <FeaturedProjects />
         <RecentPosts />
+        <WorkshopVideos />
         <Contact />
         <Footer />
       </main>

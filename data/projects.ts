@@ -50,6 +50,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/salfiya.png",
     LinkGit: "https://salfiya.sh/",
     category: "uiux",
+    Technologies: ["Reactjs", "Tailwind",],
   },
 
   {
@@ -60,7 +61,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/panekka.png",
     LinkGit: "https://pankekka-website.vercel.app/",
     category: "uiux",
-    Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
+    Technologies: ["Reactjs", "Tailwind"],
   },
   {
     id:   6,
@@ -70,7 +71,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/perfectscaled.png",
     LinkGit: "https://perfect-scaled.vercel.app/",
     category: "uiux",
-    Technologies: ["API"],
+    Technologies: [ "Nextjs" , "Tailwind" , "GSAP"],
   },
   {
     id: 7,
@@ -80,7 +81,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/funkytweets.png",
     LinkGit: "https://funky-tweet-vibes.vercel.app/",
     category: "uiux",
-    Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
+    Technologies: ["React", "Tailwind"],
   },
   {
     id:   8,
@@ -90,7 +91,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/aesop.png",
     LinkGit: "https://timely-chaja-21ff77.netlify.app/",
     category: "uiux",
-    Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
+    Technologies: ["React", "Tailwind"],
   },
   {
     id: 9,
@@ -100,7 +101,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/focusfeed.png",
     LinkGit: "https://focusfeed-daily-glance.vercel.app/",
     category: "uiux",
-    Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
+    Technologies: ["React", "Tailwind"],
   },
   // Full-Stack Projects
   {
@@ -111,7 +112,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/raostume.png",
     LinkGit: "https://roastume.fun",
     category: "fullstack",
-    Technologies: ["Nextjs", "Tailwind"],
+    Technologies: ["Nextjs", "Tailwind" , "Supabase"],
   },
   {
     id: 11,
@@ -121,7 +122,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/pixelbrain.png",
     LinkGit: "https://iq-quiz-kappa.vercel.app/",
     category: "fullstack",
-    Technologies: ["Nextjs", "Tailwind"],
+    Technologies: ["Nextjs", "Tailwind" , "Supabase"],
   },
   // Freelance Projects
   {
@@ -132,6 +133,7 @@ export const projectsData: Project[] = [
     LinkGit: "https://fastandfab.in/",
     Description: "Fast Fashion website",
     category: "freelance",
+    Technologies: ["Nextjs", "Tailwind" , "Nodejs" , "Supabase"],
   },
   {
     id: 13,
@@ -141,6 +143,7 @@ export const projectsData: Project[] = [
     LinkGit: "https://www.beyonddream.in/user",
     Description: "Tech events and conferences website",
     category: "freelance",
+    Technologies: ["Nextjs", "Tailwind" , "AWS" , "Nodejs"],
   },
   {
     id: 14,
@@ -150,6 +153,7 @@ export const projectsData: Project[] = [
     LinkGit: "https://freelance-1-one.vercel.app/",
     Description: "Legal website for lawyers",
     category: "freelance",
+    Technologies: ["Nextjs", "Tailwind"],
   },
   {
     id: 15,
@@ -159,6 +163,7 @@ export const projectsData: Project[] = [
     LinkGit: "https://memansa.vercel.app/",
     Description: "Accessories design website",
     category: "freelance",
+    Technologies: ["Reactjs", "Tailwind"],
   },
 
   {
@@ -169,6 +174,7 @@ export const projectsData: Project[] = [
     LinkGit: "https://letsgrowesports.vercel.app/",
     Description: "Esports platform",
     category: "freelance",
+    Technologies: ["Nextjs", "Tailwind" , "AWS" , "Nodejs"],
   },
   // General Projects
   {
@@ -179,7 +185,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/Taskflow.png",
     LinkGit: "https://task-flow-x-seven.vercel.app/",
     category: "general",
-    Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
+    Technologies: ["React", "Tailwind"],
   },
   {
     id: 18,
@@ -189,7 +195,7 @@ export const projectsData: Project[] = [
     bgDarkImage: "/assets/ethsignals.png",
     LinkGit: "https://crypto-analysis-phi.vercel.app/",
     category: "general",
-    Technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript", "GSAP"],
+    Technologies: ["React", "Tailwind", "GSAP"],
   },
   {
     id: 19,

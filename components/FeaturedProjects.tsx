@@ -20,8 +20,8 @@ export default function FeaturedProjects() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
-        {featuredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {featuredProjects.map((project, index) => (
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
 

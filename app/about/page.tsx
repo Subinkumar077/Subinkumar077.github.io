@@ -34,8 +34,8 @@ export default function AboutPage() {
             Experience
           </h2>
           <div className="flex flex-col">
-            {experienceData.map((item) => (
-              <ExperienceItem key={item.id} item={item} />
+            {experienceData.map((item, index) => (
+              <ExperienceItem key={item.id} item={item} index={index} />
             ))}
           </div>
         </section>
@@ -47,8 +47,8 @@ export default function AboutPage() {
             Education
           </h2>
           <div className="flex flex-col">
-            {educationData.map((item) => (
-              <ExperienceItem key={item.id} item={item} />
+            {educationData.map((item, index) => (
+              <ExperienceItem key={item.id} item={item} index={index} />
             ))}
           </div>
         </section>
