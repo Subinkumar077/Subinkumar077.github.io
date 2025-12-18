@@ -169,7 +169,7 @@ export const lifeCategories: LifeCategory[] = [
         id: "4",
         title: "Code Geass",
         author: "Ichirō Ōkouchi",
-        image: "https://m.media-amazon.com/images/M/MV5BYzZkYjM1MWMtNTY3Mi00MTMzLTlhNmQtN2ExZjFkYzdjZmFjXkEyXkFqcGc@._V1_.jpg",
+        image: "https://m.media-amazon.com/images/I/71Mr5kGOsSL._AC_UF894,1000_QL80_.jpg",
       },
       {
         id: "5",
