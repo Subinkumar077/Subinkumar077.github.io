@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface ContributionDay {
   contributionCount: number;
@@ -77,20 +77,43 @@ export default function ContributionGraph() {
     setTooltip(null);
   };
 
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+  const monthNames = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   ];
+
+  // Calculate month labels with their positions based on actual week data
+  const { filteredWeeks, monthLabels } = useMemo(() => {
+    if (!data) return { filteredWeeks: [], monthLabels: [] };
+
+    const today = new Date();
+    today.setHours(23, 59, 59, 999);
+
+    // Filter weeks and days to only include up to today
+    const filtered = data.weeks.map((week) => ({
+      ...week,
+      contributionDays: week.contributionDays.filter(day => new Date(day.date) <= today)
+    })).filter(week => week.contributionDays.length > 0);
+
+    // Calculate month positions
+    const labels: { month: string; weekIndex: number }[] = [];
+    let lastMonth = -1;
+
+    filtered.forEach((week, weekIndex) => {
+      if (week.contributionDays.length > 0) {
+        const firstDay = week.contributionDays[0];
+        const date = new Date(firstDay.date);
+        const month = date.getMonth();
+        
+        if (month !== lastMonth) {
+          labels.push({ month: monthNames[month], weekIndex });
+          lastMonth = month;
+        }
+      }
+    });
+
+    return { filteredWeeks: filtered, monthLabels: labels };
+  }, [data]);
 
   // Fallback to simulated data if loading or error
   if (loading || error || !data) {
@@ -104,7 +127,7 @@ export default function ContributionGraph() {
     return (
       <section className="mt-20 lg:pl-12 opacity-80 hover:opacity-100 transition-opacity">
         <div className="flex justify-between text-xs font-geist text-neutral-600 mb-2 px-1">
-          {months.map((m, i) => (
+          {monthNames.map((m, i) => (
             <span key={i}>{m}</span>
           ))}
         </div>
@@ -164,20 +187,27 @@ export default function ContributionGraph() {
         </div>
       )}
 
-      <div className="flex justify-between text-xs font-geist text-neutral-600 mb-2 px-1">
-        {months.map((m, i) => (
-          <span key={i}>{m}</span>
+      {/* Dynamic month labels positioned above correct weeks */}
+      <div className="relative text-xs font-geist text-neutral-600 mb-2 h-4 w-full">
+        {monthLabels.map((label, i) => (
+          <span
+            key={i}
+            className="absolute"
+            style={{ left: `${(label.weekIndex / filteredWeeks.length) * 100}%` }}
+          >
+            {label.month}
+          </span>
         ))}
       </div>
 
-      <div className="w-full overflow-hidden">
-        <div className="flex gap-1">
-          {data.weeks.map((week, i) => (
-            <div key={i} className="flex flex-col gap-1">
+      <div className="w-full">
+        <div className="flex gap-1 w-full">
+          {filteredWeeks.map((week, i) => (
+            <div key={i} className="flex flex-col gap-1 flex-1">
               {week.contributionDays.map((day, j) => (
                 <div
                   key={j}
-                  className={`w-3 h-3 rounded-[1px] cursor-pointer ${getColorClass(
+                  className={`aspect-square w-full rounded-[2px] cursor-pointer ${getColorClass(
                     day.contributionCount
                   )}`}
                   onMouseEnter={(e) => handleMouseEnter(e, day.date, day.contributionCount)}
