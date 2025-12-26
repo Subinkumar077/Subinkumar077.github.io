@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function WorkshopVideos() {
   return (
     <section id="workshops" className="mt-32 lg:pl-12 relative">
-      <h2 className="text-3xl font-geist font-light tracking-tight text-white mb-12">
+      <h2 className="text-3xl font-figtree font-light tracking-tight text-white mb-12">
         Workshops & Tutorials
       </h2>
 
@@ -52,12 +52,12 @@ export default function WorkshopVideos() {
               </div>
               
               <div className="flex flex-col gap-2">
-                <h3 className={`text-lg font-inter font-light text-white ${theme.title} transition-colors leading-snug`}>
+                <h3 className={`text-lg font-figtree font-light text-white ${theme.title} transition-colors leading-snug`}>
                   {video.title}
                 </h3>
                 
                 {(video.duration || video.views) && (
-                  <div className="flex items-center gap-3 text-xs text-neutral-500 font-geist tracking-wide">
+                  <div className="flex items-center gap-3 text-xs text-neutral-500 font-figtree tracking-wide">
                     {video.duration && (
                       <span className="flex items-center gap-1">
                         <Clock className="w-3 h-3" /> {video.duration}
@@ -71,11 +71,11 @@ export default function WorkshopVideos() {
                   </div>
                 )}
                 
-                <p className="text-sm text-neutral-400 font-inter font-normal line-clamp-2 mt-1 leading-relaxed">
+                <p className="text-sm text-neutral-400 font-figtree font-normal line-clamp-2 mt-1 leading-relaxed">
                   {video.description}
                 </p>
                 
-                <div className={`flex gap-2 text-xs font-geist tracking-wider ${theme.tags} mt-2 flex-wrap`}>
+                <div className={`flex gap-2 text-xs font-figtree tracking-wider ${theme.tags} mt-2 flex-wrap`}>
                   {video.tags.map((tag, tagIndex) => (
                     <span key={tagIndex}>{tag}</span>
                   ))}

@@ -126,7 +126,7 @@ export default function ContributionGraph() {
 
     return (
       <section className="mt-20 lg:pl-12 opacity-80 hover:opacity-100 transition-opacity">
-        <div className="flex justify-between text-xs font-geist text-neutral-600 mb-2 px-1">
+        <div className="flex justify-between text-xs font-figtree text-neutral-600 mb-2 px-1">
           {monthNames.map((m, i) => (
             <span key={i}>{m}</span>
           ))}
@@ -147,7 +147,7 @@ export default function ContributionGraph() {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-3 text-xs font-geist text-neutral-600">
+        <div className="flex justify-between items-center mt-3 text-xs font-figtree text-neutral-600">
           <span>
             {loading
               ? "Loading..."
@@ -176,7 +176,7 @@ export default function ContributionGraph() {
       {/* Custom Tooltip */}
       {tooltip && (
         <div
-          className={`fixed z-50 px-3 py-2 text-xs font-geist text-white bg-[#0a0a0a] border ${getBorderColorClass(tooltip.count)} rounded-md shadow-lg pointer-events-none whitespace-nowrap`}
+          className={`fixed z-50 px-3 py-2 text-xs font-figtree text-white bg-[#0a0a0a] border ${getBorderColorClass(tooltip.count)} rounded-md shadow-lg pointer-events-none whitespace-nowrap`}
           style={{
             left: tooltip.x,
             top: tooltip.y - 40,
@@ -188,7 +188,7 @@ export default function ContributionGraph() {
       )}
 
       {/* Dynamic month labels positioned above correct weeks */}
-      <div className="relative text-xs font-geist text-neutral-600 mb-2 h-4 w-full">
+      <div className="relative text-xs font-figtree text-neutral-600 mb-2 h-4 w-full">
         {monthLabels.map((label, i) => (
           <span
             key={i}
@@ -219,7 +219,7 @@ export default function ContributionGraph() {
         </div>
       </div>
 
-      <div className="flex justify-between items-center mt-3 text-xs font-geist text-neutral-600">
+      <div className="flex justify-between items-center mt-3 text-xs font-figtree text-neutral-600">
         <span>{data.totalContributions.toLocaleString()} contributions</span>
         <div className="flex items-center gap-2">
           <span>Less</span>

@@ -15,7 +15,7 @@ export default function FeaturedProjects() {
 
   return (
     <section id="projects" className="mt-32 lg:pl-12 relative">
-      <h2 className="text-3xl font-geist font-light tracking-tight text-white mb-12">
+      <h2 className="text-3xl font-figtree font-light tracking-tight text-white mb-12">
         Featured Projects
       </h2>
 

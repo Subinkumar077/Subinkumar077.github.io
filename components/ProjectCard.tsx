@@ -34,7 +34,7 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           {project.Name}
         </h3>
         {project.Technologies && (
-          <p className={`text-xs ${theme.text} font-geist mb-3`}>
+          <p className={`text-xs ${theme.text} font-figtree mb-3`}>
             {project.Technologies.join(" / ")}
           </p>
         )}

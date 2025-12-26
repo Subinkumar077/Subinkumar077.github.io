@@ -14,7 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full max-w-6xl mx-auto px-6 py-8 flex justify-between items-center text-sm font-geist font-light z-50 relative">
+    <nav className="w-full max-w-6xl mx-auto px-6 py-8 flex justify-between items-center text-sm font-figtree font-light z-50 relative">
       <Link href="/" className="hover:opacity-80 transition-opacity">
         <Image
           src="/assets/logo.png"

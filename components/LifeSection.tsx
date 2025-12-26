@@ -42,7 +42,7 @@ export default function LifeSection() {
   return (
     <section className="mt-24">
       <div className="mb-8">
-        <h2 className="text-3xl font-geist font-light tracking-tight text-white mb-12">
+        <h2 className="text-3xl font-figtree font-light tracking-tight text-white mb-12">
           Personal Life
         </h2>
        
@@ -60,7 +60,7 @@ export default function LifeSection() {
                 <category.icon className={`w-6 h-6 text-neutral-400 ${category.color}`} />
               </div>
               <div>
-                <h3 className="text-xl font-geist font-light text-white mb-1">
+                <h3 className="text-xl font-figtree font-light text-white mb-1">
                   {category.title}
                 </h3>
                 <p className="text-neutral-500 text-sm">{category.description}</p>

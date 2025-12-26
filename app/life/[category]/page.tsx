@@ -25,7 +25,7 @@ export default function LifeCategoryPage() {
   }
 
   return (
-    <div className="bg-background text-neutral-300 font-inter antialiased selection:bg-pink-500/20 selection:text-white relative overflow-x-hidden min-h-screen">
+    <div className="bg-background text-neutral-300 font-figtree antialiased selection:bg-pink-500/20 selection:text-white relative overflow-x-hidden min-h-screen">
       {/* Ambient Background Glow */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-pink-900/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
@@ -44,7 +44,7 @@ export default function LifeCategoryPage() {
             </Link>
           </button>
           
-          <h1 className="text-4xl md:text-5xl font-geist font-normal tracking-tight text-white mb-8 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-figtree font-normal tracking-tight text-white mb-8 leading-tight">
             {category.heroTitle.line1} <br />
             <span className={category.colorClass}>{category.heroTitle.highlight1}</span>
             {category.heroTitle.midText && <span>{category.heroTitle.midText}</span>}
@@ -77,7 +77,7 @@ export default function LifeCategoryPage() {
               
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-geist font-semibold text-white mb-2">
+                <h3 className="text-xl font-figtree font-semibold text-white mb-2">
                   {item.title}
                 </h3>
                 {(item.author || item.director || item.artist) && (
@@ -94,7 +94,7 @@ export default function LifeCategoryPage() {
         <div className="border-t border-neutral-800/50 pt-24 pb-12 flex flex-col items-center text-center">
           <div className={`w-12 h-[1px] ${category.colorClass.replace('text-', 'bg-')} mb-8`} />
           <blockquote className="max-w-2xl">
-            <p className="text-2xl md:text-3xl font-geist italic text-neutral-300 mb-6">
+            <p className="text-2xl md:text-3xl font-figtree italic text-neutral-300 mb-6">
               &quot;{category.quote.split(' — ')[0]}&quot;
             </p>
             {category.quote.includes(' — ') && (

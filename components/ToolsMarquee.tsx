@@ -41,7 +41,7 @@ export default function ToolsMarquee() {
       <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent z-10"></div>
       <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent z-10"></div>
 
-      <h2 className="text-lg font-geist font-light text-white mb-8 px-1">
+      <h2 className="text-lg font-figtree font-light text-white mb-8 px-1">
         Technologies & Tools
       </h2>
 
@@ -92,7 +92,7 @@ function ToolItem({
   return (
     <div className="w-32 h-20 bg-surface border border-white/5 rounded-lg flex flex-col items-center justify-center gap-2 group hover:border-white/20 transition-colors">
       <Icon className={`w-5 h-5 ${color} transition-colors`} />
-      <span className="text-xs font-geist text-neutral-500">{label}</span>
+      <span className="text-xs font-figtree text-neutral-500">{label}</span>
     </div>
   );
 }

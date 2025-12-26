@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="bg-background text-neutral-300 font-inter antialiased selection:bg-pink-500/20 selection:text-white relative overflow-x-hidden min-h-screen">
+    <div className="bg-background text-neutral-300 font-figtree antialiased selection:bg-pink-500/20 selection:text-white relative overflow-x-hidden min-h-screen">
       {/* Ambient Background Glow */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-pink-900/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <main className="w-full max-w-4xl mx-auto px-6 py-32 relative">
         {/* Intro */}
         <section className="mb-24 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-geist font-normal tracking-tight text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-figtree font-normal tracking-tight text-white mb-6 leading-tight">
             Imagine <br />
             <span className="text-pink-500">Design</span> and
             <span className="text-pink-500 ml-2">Code</span>
@@ -30,7 +30,7 @@ export default function AboutPage() {
 
         {/* Experience Section */}
         <section className="mb-24">
-          <h2 className="text-2xl font-geist font-light text-white mb-12 flex items-center gap-3">
+          <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-pink-500"></span>
             Experience
           </h2>
@@ -43,7 +43,7 @@ export default function AboutPage() {
 
         {/* Education Section */}
         <section className="mb-24">
-          <h2 className="text-2xl font-geist font-light text-white mb-12 flex items-center gap-3">
+          <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-pink-500"></span>
             Education
           </h2>
@@ -56,7 +56,7 @@ export default function AboutPage() {
 
         {/* Social Impact Section */}
         <section className="mb-24">
-          <h2 className="text-2xl font-geist font-light text-white mb-8 flex items-center gap-3">
+          <h2 className="text-2xl font-figtree font-light text-white mb-8 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-pink-500"></span>
             Social Impact
           </h2>
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
           <div className="bg-neutral-900/30 border border-white/5 rounded-2xl p-8">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center text-pink-500 font-geist font-medium text-2xl">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center text-pink-500 font-figtree font-medium text-2xl">
                 <Image
                 src="/assets/face.png"
                 alt="Panekka"
@@ -78,14 +78,14 @@ export default function AboutPage() {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-xl font-geist font-medium tracking-tight text-white">
+                  <h3 className="text-xl font-figtree font-medium tracking-tight text-white">
                     Harish_521
                   </h3>
                   <span className="bg-blue-500/10 text-blue-400 text-[10px] px-1.5 py-0.5 rounded uppercase font-bold tracking-wider border border-blue-500/20">
                     Verified
                   </span>
                 </div>
-                <p className="text-neutral-400 text-sm font-geist">
+                <p className="text-neutral-400 text-sm font-figtree">
                   Content Creator & Teacher
                 </p>
               </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
         
          {/* Idoltime Section */}
          <section className="mb-24">
-          <h2 className="text-2xl font-geist font-light text-white mb-8 flex items-center gap-3">
+          <h2 className="text-2xl font-figtree font-light text-white mb-8 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-pink-500"></span>
             Idoltime
           </h2>

@@ -14,7 +14,7 @@ export default function ProjectsPage() {
   );
 
   return (
-    <div className="bg-background text-neutral-300 font-inter antialiased selection:bg-pink-500/20 selection:text-white relative overflow-x-hidden min-h-screen">
+    <div className="bg-background text-neutral-300 font-figtree antialiased selection:bg-pink-500/20 selection:text-white relative overflow-x-hidden min-h-screen">
       {/* Ambient Background Glow */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-pink-900/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-32 gap-12">
           <div>
-            <h1 className="text-4xl md:text-6xl font-geist font-normal text-white mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-figtree font-normal text-white mb-6 tracking-tight leading-tight">
               Projects <span className="text-pink-500">Work</span>
             </h1>
             <p className="text-neutral-500 text-xl font-light">
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
         {/* UI/UX Section */}
         {uiuxProjects.length > 0 && (
           <section className="mb-32">
-            <h2 className="text-2xl font-geist font-light text-white mb-12 flex items-center gap-3">
+            <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
               <span className="w-8 h-[1px] bg-pink-500"></span>
               UI-UX Projects
             </h2>
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
         {/* Full Stack Section */}
         {fullstackProjects.length > 0 && (
           <section className="mb-32">
-            <h2 className="text-2xl font-geist font-light text-white mb-12 flex items-center gap-3">
+            <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
               <span className="w-8 h-[1px] bg-pink-500"></span>
               Full-Stack Projects
             </h2>
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
         {/* Freelance Section */}
         {freelanceProjects.length > 0 && (
           <section className="mb-32">
-            <h2 className="text-2xl font-geist font-light text-white mb-12 flex items-center gap-3">
+            <h2 className="text-2xl font-figtree font-light text-white mb-12 flex items-center gap-3">
               <span className="w-8 h-[1px] bg-pink-500"></span>
               Freelance Projects
             </h2>
