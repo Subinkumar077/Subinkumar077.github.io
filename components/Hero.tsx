@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CodingStatusDot from "./CodingStatus";
+import StudentBadge from "./StudentBadge";
 
 export default function Hero() {
   return (
@@ -59,14 +60,21 @@ export default function Hero() {
             </a>
           </div>
 
-          <p>
+          <p className="flex flex-wrap items-center gap-4">
             <Link
               href="https://calendly.com/xharish52/30min"
               target="_blank"
-              className="text-pink-400 hover:text-white transition-colors underline decoration-neutral-700 underline-offset-4"
+              className="group relative inline-block text-pink-400 hover:text-white transition-colors duration-300"
             >
-              Book a Call
+              <span className="relative z-10">Book a Call</span>
+              {/* Hover tooltip */}
+              <span className="absolute bottom-full left-0 mb-2 px-2 py-1 text-xs text-neutral-400 bg-neutral-900 border border-neutral-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                for clients
+              </span>
             </Link>
+            
+            {/* Student Badge */}
+            <StudentBadge />
           </p>
         </div>
       </div>
