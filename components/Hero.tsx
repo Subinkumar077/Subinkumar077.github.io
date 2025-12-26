@@ -24,10 +24,10 @@ export default function Hero() {
 
         {/* Name and Title */}
         <div>
-          <h1 className="text-4xl lg:text-7xl font-figtree font-normal tracking-tight text-white mb-4">
+          <h1 className="text-4xl lg:text-7xl font-geist font-normal tracking-tight text-white mb-4">
             Mohammad Harish
           </h1>
-          <p className="text-sm font-figtree text-neutral-500 uppercase tracking-widest">
+          <p className="text-sm font-geist text-neutral-500 uppercase tracking-widest">
             Builder • Agency Owner • Full Stack Developer • Teacher
           </p>
         </div>
@@ -35,7 +35,8 @@ export default function Hero() {
         {/* Description Content */}
         <div className="max-w-3xl flex flex-col gap-6 text-lg font-light text-neutral-300 leading-relaxed">
           <p>
-            I build <span className="text-pink-400">innovative digital solutions</span>{" "}
+            I build{" "}
+            <span className="text-pink-400">innovative digital solutions</span>{" "}
             and teach others to amplify their{" "}
             <span className="text-pink-400">digital presence</span> through{" "}
             <span className="text-pink-400">code, design, and content</span>.
@@ -60,24 +61,24 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <p>
-              <Link
-                href="https://calendly.com/xharish52/30min"
-                target="_blank"
-                className="group relative inline-block text-pink-400 hover:text-white transition-colors underline decoration-neutral-700 underline-offset-4 hover:decoration-pink-400/50"
-              >
-                <span className="relative z-10">Book a Call</span>
-                {/* Micro animation underline effect */}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-pink-400 group-hover:w-full transition-all duration-300 ease-out"></span>
-              </Link>
-            </p>
-            
+          <p className="flex flex-wrap items-center gap-4">
+            <Link
+              href="https://calendly.com/xharish52/30min"
+              target="_blank"
+              className="group relative inline-block text-pink-400 hover:text-white transition-colors"
+            >
+              <span className="relative z-10">Book a Call</span>
+              {/* Micro animation underline effect */}
+              <span className="absolute bottom-[-2px] left-0 w-0 h-[0.5px] bg-pink-400/60 group-hover:w-full transition-all duration-300 ease-out"></span>
+              {/* Hover tooltip */}
+              <span className="absolute bottom-full left-0 mb-2 px-2 py-1 text-xs text-neutral-400 bg-neutral-900 border border-neutral-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                for clients
+              </span>
+            </Link>
+
             {/* Student Badge */}
-            <div>
-              <StudentBadge />
-            </div>
-          </div>
+            <StudentBadge />
+          </p>
         </div>
       </div>
 
@@ -86,7 +87,7 @@ export default function Hero() {
         <div className="relative w-72 xl:w-80 aspect-[3/4]">
           {/* Glow Effect */}
           <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-purple-500/10 to-transparent rounded-3xl blur-2xl"></div>
-          
+
           {/* Image Container */}
           <div className="relative w-full h-full rounded-3xl overflow-hidden border border-neutral-800/50 bg-neutral-900/50 backdrop-blur-sm">
             <Image
