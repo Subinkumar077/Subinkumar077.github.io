@@ -1,5 +1,3 @@
-"use client";
-
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -7,21 +5,25 @@ import { lifeCategories } from "@/data/life";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { notFound } from "next/navigation";
 
-export default function LifeCategoryPage() {
-  const params = useParams();
-  const router = useRouter();
-  const categoryId = params.category as string;
+export function generateStaticParams() {
+  return lifeCategories.map((category) => ({
+    category: category.id,
+  }));
+}
+
+export default function LifeCategoryPage({
+  params,
+}: {
+  params: { category: string };
+}) {
+  const categoryId = params.category;
   
   const category = lifeCategories.find((c) => c.id === categoryId);
 
   if (!category) {
-    return (
-      <div className="min-h-screen bg-background text-white flex items-center justify-center">
-        <p>Category not found</p>
-      </div>
-    );
+    notFound();
   }
 
   return (
@@ -34,15 +36,12 @@ export default function LifeCategoryPage() {
       <main className="w-full max-w-4xl mx-auto px-6 py-20 relative text-center md:text-left">
         {/* Back Button and Header */}
         <div className="mb-16">
-          <button
-            onClick={() => router.back()}
-            className="group flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-12 cursor-pointer mx-auto md:mx-0"
-          >
+          <div className="group flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-12 mx-auto md:mx-0">
             <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <Link href="/life" className="text-neutral-500 hover:text-white transition-colors">
               <span>Go back</span>
             </Link>
-          </button>
+          </div>
           
           <h1 className="text-4xl md:text-5xl font-figtree font-normal tracking-tight text-white mb-8 leading-tight">
             {category.heroTitle.line1} <br />
