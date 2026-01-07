@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { NextResponse } from "next/server";
 
 // WakaTime Status API endpoint
@@ -48,21 +49,21 @@ export async function GET() {
     }
 
     const summaryData = await summaryRes.json();
-    
+
     // Check if currently coding based on last heartbeat
     let isCurrentlyCoding = false;
-    
+
     if (heartbeatRes.ok) {
       const heartbeatData = await heartbeatRes.json();
       const heartbeats = heartbeatData.data || [];
-      
+
       if (heartbeats.length > 0) {
         // Get the most recent heartbeat
         const lastHeartbeat = heartbeats[heartbeats.length - 1];
         const lastHeartbeatTime = new Date(lastHeartbeat.time * 1000);
         const now = new Date();
         const diffMinutes = (now.getTime() - lastHeartbeatTime.getTime()) / (1000 * 60);
-        
+
         // If last heartbeat was within 5 minutes, user is actively coding
         isCurrentlyCoding = diffMinutes <= 5;
       }
