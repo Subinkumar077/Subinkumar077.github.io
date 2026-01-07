@@ -13,7 +13,7 @@ export default function Hero() {
           <div className="w-full h-full aspect-square rounded-full overflow-hidden border-2 border-neutral-800">
             <Image
               src="/assets/face.png"
-              alt="Mohammad Harish"
+              alt="Subin Kumar"
               fill
               className="object-cover rounded-full"
             />
@@ -25,7 +25,7 @@ export default function Hero() {
         {/* Name and Title */}
         <div>
           <h1 className="text-4xl lg:text-7xl font-geist font-normal tracking-tight text-white mb-4">
-            Mohammad Harish
+            Subin Kumar
           </h1>
           <p className="text-sm font-geist text-neutral-500 uppercase tracking-widest">
             Builder • Agency Owner • Full Stack Developer • Teacher
@@ -92,7 +92,7 @@ export default function Hero() {
           <div className="relative w-full h-full rounded-3xl overflow-hidden border border-neutral-800/50 bg-neutral-900/50 backdrop-blur-sm">
             <Image
               src="/assets/face.jpg"
-              alt="Mohammad Harish"
+              alt="Subin Kumar"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
               priority
