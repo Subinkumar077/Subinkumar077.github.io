@@ -19,7 +19,7 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Mohammad Harish",
+  title: "Subin Kumar",
   description: "Founder : InfiniteStudioX",
 };
 
